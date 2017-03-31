@@ -391,7 +391,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/25/文章标题/" itemprop="url">
-                  文章标题
+                  git常用命令
                 </a>
               
             
@@ -445,7 +445,35 @@
       
         
           
-            <p>你好，欢迎来到我的个人博客。</p>
+            <h2 id="关于git常用命令"><a href="#关于git常用命令" class="headerlink" title="关于git常用命令"></a>关于git常用命令</h2><ol>
+<li><p>git初始化文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git init</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看仓库状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git status</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交到暂存区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git add somefile.html</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交到版本库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git commit -m &quot;描述&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git rm somefile.html</div></pre></td></tr></table></figure>
+</li>
+<li><p>把代码推送到远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git push 地址 master</div></pre></td></tr></table></figure>
+</li>
+<li><p>从远程仓库拉取代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git pull 地址 master</div></pre></td></tr></table></figure>
+</li>
+<li><p>本地配置远程库</p>
+<p>通俗一点讲就是为常用的远程库加个别名，省的老是要写好长的地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git remote add origin 地址</div></pre></td></tr></table></figure>
+<p> 这时候origin就是别名了 一般配置为origin也可以是其他名称</p>
+<p>配置完后origin就等于地址了</p>
+</li>
+</ol>
 
           
         

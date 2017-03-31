@@ -87,16 +87,76 @@
 
 
 
-<meta name="description" content="你好，欢迎来到我的个人博客。">
+<meta name="description" content="关于git常用命令
+git初始化文件夹
+1$git init
+
+查看仓库状态
+1$git status
+
+提交到暂存区
+1$git add somefile.html
+
+提交到版本库
+1$git commit -m &amp;quot;描述&amp;quot;
+
+删除文件
+1$git rm somefile.html
+
+把代码推送到远程仓库
+1$git push 地址 master
+
+从远程仓库拉取代码
+1$gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文章标题">
+<meta property="og:title" content="git常用命令">
 <meta property="og:url" content="/2017/03/25/文章标题/index.html">
 <meta property="og:site_name" content="Czopo's Home">
-<meta property="og:description" content="你好，欢迎来到我的个人博客。">
-<meta property="og:updated_time" content="2017-03-24T16:53:47.084Z">
+<meta property="og:description" content="关于git常用命令
+git初始化文件夹
+1$git init
+
+查看仓库状态
+1$git status
+
+提交到暂存区
+1$git add somefile.html
+
+提交到版本库
+1$git commit -m &amp;quot;描述&amp;quot;
+
+删除文件
+1$git rm somefile.html
+
+把代码推送到远程仓库
+1$git push 地址 master
+
+从远程仓库拉取代码
+1$gi">
+<meta property="og:updated_time" content="2017-03-31T02:13:19.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章标题">
-<meta name="twitter:description" content="你好，欢迎来到我的个人博客。">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="关于git常用命令
+git初始化文件夹
+1$git init
+
+查看仓库状态
+1$git status
+
+提交到暂存区
+1$git add somefile.html
+
+提交到版本库
+1$git commit -m &amp;quot;描述&amp;quot;
+
+删除文件
+1$git rm somefile.html
+
+把代码推送到远程仓库
+1$git push 地址 master
+
+从远程仓库拉取代码
+1$gi">
 
 
 
@@ -130,7 +190,7 @@
 
 
 
-  <title> 文章标题 | Czopo's Home </title>
+  <title> git常用命令 | Czopo's Home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +330,7 @@
             
             
               
-                文章标题
+                git常用命令
               
             
           </h1>
@@ -321,7 +381,35 @@
       
 
       
-        <p>你好，欢迎来到我的个人博客。</p>
+        <h2 id="关于git常用命令"><a href="#关于git常用命令" class="headerlink" title="关于git常用命令"></a>关于git常用命令</h2><ol>
+<li><p>git初始化文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git init</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看仓库状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git status</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交到暂存区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git add somefile.html</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交到版本库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git commit -m &quot;描述&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git rm somefile.html</div></pre></td></tr></table></figure>
+</li>
+<li><p>把代码推送到远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git push 地址 master</div></pre></td></tr></table></figure>
+</li>
+<li><p>从远程仓库拉取代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git pull 地址 master</div></pre></td></tr></table></figure>
+</li>
+<li><p>本地配置远程库</p>
+<p>通俗一点讲就是为常用的远程库加个别名，省的老是要写好长的地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git remote add origin 地址</div></pre></td></tr></table></figure>
+<p> 这时候origin就是别名了 一般配置为origin也可以是其他名称</p>
+<p>配置完后origin就等于地址了</p>
+</li>
+</ol>
 
       
     </div>
@@ -417,8 +505,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -462,6 +559,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于git常用命令"><span class="nav-number">1.</span> <span class="nav-text">关于git常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
