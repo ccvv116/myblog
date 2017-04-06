@@ -326,32 +326,19 @@
 
       
         
-          
-            <a id="more"></a>
-<ol>
+          <ol>
 <li><p>过滤器</p>
 <p>vue2.0移除了自带过滤器，必须自己定义过滤器</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Vue.filter(id,[definition])</span></div><div class="line"><span class="comment">//参数：&#123;string&#125; id</span></div><div class="line"><span class="comment">//&#123;function&#125; [definition]</span></div><div class="line"><span class="comment">//用法:</span></div><div class="line"><span class="comment">//注册或获取全局过滤器。</span></div><div class="line"></div><div class="line"><span class="comment">// 注册</span></div><div class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="comment">// 返回处理后的值</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// getter，返回已注册的过滤器</span></div><div class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<!--more-->
-<ol>
-<li><p>组件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注册组件，传入一个扩展过的构造器</span></div><div class="line">Vue.component(<span class="string">'my-component'</span>, Vue.extend(&#123; <span class="comment">/* ... */</span> &#125;))</div><div class="line"><span class="comment">// 注册组件，传入一个选项对象（自动调用 Vue.extend）</span></div><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</div><div class="line"><span class="comment">// 获取注册的组件（始终返回构造器）</span></div><div class="line"></div><div class="line"><span class="comment">// 相比1.0可以直接传入对象 如</span></div><div class="line"><span class="keyword">var</span> te = &#123;<span class="attr">template</span>:<span class="string">"&lt;div&gt;...&lt;/div&gt;"</span>&#125;</div><div class="line">Vue.component(<span class="string">'my-component'</span>, te))</div><div class="line"></div><div class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</div></pre></td></tr></table></figure>
-</li>
-<li><p>小改动</p>
-<ol>
-<li>移除v-for中的隐世变量$ </li>
-<li>移除属性track-by 改为:key=</li>
-</ol>
-</li>
-<li><p>生命周期</p>
-<p>生命周期相较于1.0作者做了非常大的改动</p>
-<p>新增了一系列周期钩子详情参考<a href="https://cn.vuejs.org/v2/api/#选项-生命周期钩子" target="_blank" rel="external">Vue官方手册</a></p>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/01/Vue2.0相较1.0的改变/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -594,44 +581,19 @@
 
       
         
-          
-            <a id="more"></a>
-<ol>
+          <ol>
 <li><p>在每个组件模板,不在支持片段代码</p>
 <p>组件中模板:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//之前:</div><div class="line">	&lt;template&gt;</div><div class="line">		&lt;h3&gt;我是组件&lt;/h3&gt;&lt;strong&gt;我是加粗标签&lt;/strong&gt;</div><div class="line">	&lt;/template&gt;</div><div class="line">//现在:  必须有根元素，包裹住所有的代码</div><div class="line">	&lt;template id=&quot;aaa&quot;&gt;</div><div class="line">	        &lt;div&gt;</div><div class="line">	            &lt;h3&gt;我是组件&lt;/h3&gt;</div><div class="line">	            &lt;strong&gt;我是加粗标签&lt;/strong&gt;</div><div class="line">	        &lt;/div&gt;</div><div class="line">	&lt;/template&gt;</div></pre></td></tr></table></figure>
 </li>
-<li><p>关于组件定义</p>
-<p>Vue.extend    这种方式，在2.0里面有，但是有一些改动，这种写法，即使能用，咱也不用——废弃</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Vue.component(组件名称,&#123;	//在2.0继续能用</div><div class="line">	data()&#123;&#125;</div><div class="line">	methods:&#123;&#125;</div><div class="line">	template:</div><div class="line">&#125;);</div><div class="line"></div><div class="line">2.0推出一个组件，简洁定义方式：</div><div class="line">var Home=&#123;</div><div class="line">	template:&apos;&apos;		// -&gt;   Vue.extend()</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>生命周期</p>
-<p>之前:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">init	</div><div class="line">created</div><div class="line">beforeCompile</div><div class="line">compiled</div><div class="line">ready		√	-&gt;     mounted</div><div class="line">beforeDestroy	</div><div class="line">destroyed</div></pre></td></tr></table></figure>
-<p>现在:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">beforeCreate	组件实例刚刚被创建,属性都没有</div><div class="line">created	实例已经创建完成，属性已经绑定</div><div class="line">beforeMount	模板编译之前</div><div class="line">mounted	模板编译之后，代替之前ready  *</div><div class="line">beforeUpdate	组件更新之前</div><div class="line">updated	组件更新完毕	*</div><div class="line">beforeDestroy	组件销毁前</div><div class="line">destroyed	组件销毁后</div></pre></td></tr></table></figure>
-</li>
-<li><p>循环</p>
-<p>2.0里面默认就可以添加重复数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">arr.forEach(function(item,index)&#123;</div><div class="line">&#125;);</div><div class="line">//去掉了隐式一些变量$index $key</div><div class="line">//之前:</div><div class="line">		v-for=&quot;(index,val) in array&quot;</div><div class="line">	//现在:</div><div class="line">		v-for=&quot;(val,index) in array&quot;</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>track-by=”id”</p>
-<p>变成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li v-for=&quot;(val,index) in list&quot; :key=&quot;index&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>自定义键盘指令</p>
-<p>之前： Vue.directive(‘on’).keyCodes.f1=17;    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">现在:  Vue.config.keyCodes.ctrl=17</div></pre></td></tr></table></figure>
-</li>
-<li><p>过滤器</p>
-<p>之前:    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">	系统就自带很多过滤</div><div class="line">	&#123;&#123;msg | currency&#125;&#125;</div><div class="line">	&#123;&#123;msg | json&#125;&#125;</div><div class="line">	....</div><div class="line">	limitBy</div><div class="line">	filterBy</div><div class="line">	.....</div><div class="line">//一些简单功能，自己通过js实现</div><div class="line"></div><div class="line">//到了2.0， 内置过滤器，全部删除了</div></pre></td></tr></table></figure>
-<p>详情参考<a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="external">Vue官方手册</a></p>
-</li>
 </ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/09/测试/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -878,7 +840,7 @@
 
       
         
-          <p>另推荐一款markdown编辑器typora<br>
+          <p>另推荐一款markdown编辑器typora</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/01/18/markdown基本常用语法/#more" rel="contents">
