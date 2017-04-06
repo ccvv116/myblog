@@ -326,19 +326,32 @@
 
       
         
-          <h2 id="Vue2-0相较1-0的改变"><a href="#Vue2-0相较1-0的改变" class="headerlink" title="Vue2.0相较1.0的改变"></a>Vue2.0相较1.0的改变</h2><ol>
+          
+            <a id="more"></a>
+<ol>
 <li><p>过滤器</p>
 <p>vue2.0移除了自带过滤器，必须自己定义过滤器</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Vue.filter(id,[definition])</span></div><div class="line"><span class="comment">//参数：&#123;string&#125; id</span></div><div class="line"><span class="comment">//&#123;function&#125; [definition]</span></div><div class="line"><span class="comment">//用法:</span></div><div class="line"><span class="comment">//注册或获取全局过滤器。</span></div><div class="line"></div><div class="line"><span class="comment">// 注册</span></div><div class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="comment">// 返回处理后的值</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// getter，返回已注册的过滤器</span></div><div class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</div></pre></td></tr></table></figure>
 </li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/01/Vue2.0相较1.0的改变/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<!--more-->
+<ol>
+<li><p>组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注册组件，传入一个扩展过的构造器</span></div><div class="line">Vue.component(<span class="string">'my-component'</span>, Vue.extend(&#123; <span class="comment">/* ... */</span> &#125;))</div><div class="line"><span class="comment">// 注册组件，传入一个选项对象（自动调用 Vue.extend）</span></div><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</div><div class="line"><span class="comment">// 获取注册的组件（始终返回构造器）</span></div><div class="line"></div><div class="line"><span class="comment">// 相比1.0可以直接传入对象 如</span></div><div class="line"><span class="keyword">var</span> te = &#123;<span class="attr">template</span>:<span class="string">"&lt;div&gt;...&lt;/div&gt;"</span>&#125;</div><div class="line">Vue.component(<span class="string">'my-component'</span>, te))</div><div class="line"></div><div class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>小改动</p>
+<ol>
+<li>移除v-for中的隐世变量$ </li>
+<li>移除属性track-by 改为:key=</li>
+</ol>
+</li>
+<li><p>生命周期</p>
+<p>生命周期相较于1.0作者做了非常大的改动</p>
+<p>新增了一系列周期钩子详情参考<a href="https://cn.vuejs.org/v2/api/#选项-生命周期钩子" target="_blank" rel="external">Vue官方手册</a></p>
+</li>
+</ol>
+
+          
         
       
     </div>
@@ -456,18 +469,14 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/25/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -869,7 +878,7 @@
 
       
         
-          <h3 id="markdown基本常用语法"><a href="#markdown基本常用语法" class="headerlink" title="markdown基本常用语法"></a>markdown基本常用语法</h3><p>另推荐一款markdown编辑器typora<br>
+          <p>另推荐一款markdown编辑器typora<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/01/18/markdown基本常用语法/#more" rel="contents">

@@ -87,25 +87,22 @@
 
 
 
-<meta name="description" content="Vue2.0相较1.0的改变
-过滤器
+<meta name="description" content="过滤器
 vue2.0移除了自带过滤器，必须自己定义过滤器
-123456789101112//Vue.filter(id,[definition])//参数：&amp;#123;string&amp;#125; id//&amp;#123;function&amp;#125; [definition]//用法://注册或获取全局过滤器。// 注册Vue.filter(&apos;my-filter&apos;, func">
+123456789101112//Vue.filter(id,[definition])//参数：&amp;#123;string&amp;#125; id//&amp;#123;function&amp;#125; [definition]//用法://注册或获取全局过滤器。// 注册Vue.filter(&apos;my-filter&apos;, function (value)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue2.0改动笔记">
 <meta property="og:url" content="/2017/04/01/Vue2.0相较1.0的改变/index.html">
 <meta property="og:site_name" content="Czopo's Home">
-<meta property="og:description" content="Vue2.0相较1.0的改变
-过滤器
+<meta property="og:description" content="过滤器
 vue2.0移除了自带过滤器，必须自己定义过滤器
-123456789101112//Vue.filter(id,[definition])//参数：&amp;#123;string&amp;#125; id//&amp;#123;function&amp;#125; [definition]//用法://注册或获取全局过滤器。// 注册Vue.filter(&apos;my-filter&apos;, func">
-<meta property="og:updated_time" content="2017-04-01T15:00:55.901Z">
+123456789101112//Vue.filter(id,[definition])//参数：&amp;#123;string&amp;#125; id//&amp;#123;function&amp;#125; [definition]//用法://注册或获取全局过滤器。// 注册Vue.filter(&apos;my-filter&apos;, function (value)">
+<meta property="og:updated_time" content="2017-04-06T08:24:54.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue2.0改动笔记">
-<meta name="twitter:description" content="Vue2.0相较1.0的改变
-过滤器
+<meta name="twitter:description" content="过滤器
 vue2.0移除了自带过滤器，必须自己定义过滤器
-123456789101112//Vue.filter(id,[definition])//参数：&amp;#123;string&amp;#125; id//&amp;#123;function&amp;#125; [definition]//用法://注册或获取全局过滤器。// 注册Vue.filter(&apos;my-filter&apos;, func">
+123456789101112//Vue.filter(id,[definition])//参数：&amp;#123;string&amp;#125; id//&amp;#123;function&amp;#125; [definition]//用法://注册或获取全局过滤器。// 注册Vue.filter(&apos;my-filter&apos;, function (value)">
 
 
 
@@ -330,13 +327,14 @@ vue2.0移除了自带过滤器，必须自己定义过滤器
       
 
       
-        <h2 id="Vue2-0相较1-0的改变"><a href="#Vue2-0相较1-0的改变" class="headerlink" title="Vue2.0相较1.0的改变"></a>Vue2.0相较1.0的改变</h2><ol>
+        <a id="more"></a>
+<ol>
 <li><p>过滤器</p>
 <p>vue2.0移除了自带过滤器，必须自己定义过滤器</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Vue.filter(id,[definition])</span></div><div class="line"><span class="comment">//参数：&#123;string&#125; id</span></div><div class="line"><span class="comment">//&#123;function&#125; [definition]</span></div><div class="line"><span class="comment">//用法:</span></div><div class="line"><span class="comment">//注册或获取全局过滤器。</span></div><div class="line"></div><div class="line"><span class="comment">// 注册</span></div><div class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="comment">// 返回处理后的值</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// getter，返回已注册的过滤器</span></div><div class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<a id="more"></a>
+<!--more-->
 <ol>
 <li><p>组件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注册组件，传入一个扩展过的构造器</span></div><div class="line">Vue.component(<span class="string">'my-component'</span>, Vue.extend(&#123; <span class="comment">/* ... */</span> &#125;))</div><div class="line"><span class="comment">// 注册组件，传入一个选项对象（自动调用 Vue.extend）</span></div><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</div><div class="line"><span class="comment">// 获取注册的组件（始终返回构造器）</span></div><div class="line"></div><div class="line"><span class="comment">// 相比1.0可以直接传入对象 如</span></div><div class="line"><span class="keyword">var</span> te = &#123;<span class="attr">template</span>:<span class="string">"&lt;div&gt;...&lt;/div&gt;"</span>&#125;</div><div class="line">Vue.component(<span class="string">'my-component'</span>, te))</div><div class="line"></div><div class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</div></pre></td></tr></table></figure>
@@ -449,17 +447,8 @@ vue2.0移除了自带过滤器，必须自己定义过滤器
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/sfms.jpg"
@@ -512,22 +501,6 @@ vue2.0移除了自带过滤器，必须自己定义过滤器
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue2-0相较1-0的改变"><span class="nav-number">1.</span> <span class="nav-text">Vue2.0相较1.0的改变</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
